@@ -1,7 +1,7 @@
 <template>
     <Form @submit="submitContact" :validation-schema="contactFormschema">
         <div class="form-group">
-            <label for="name">Ten</label>
+            <label for="name">Tên</label>
             <Field name="name" type="text" class="form-control" v-model="contactLocal.name" />
             <ErrorMessage name="name" class="error-feedback" />
         </div>
@@ -21,19 +21,19 @@
             <label for="phone">
                 Số điện thoại
             </label>
-            <Field name="phonr" type="tel" class="form-control" v-model="contactLocal.phone" />
+            <Field name="phone" type="tel" class="form-control" v-model="contactLocal.phone" />
             <ErrorMessage name="phone" class="form-feedback" />
         </div>
         <div class="form-group form-check">
             <input type="checkbox" name="favorite" class="form-check-input" v-model="contactLocal.favorite">
             <label for="favorite" class="form-check-label">
-                <strong>Lien he yeu thich</strong>
+                <strong>Liên hệ yêu thích</strong>
             </label>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">luu</button>
+            <button class="btn btn-primary">Lưu</button>
             <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteContact">
-                Xoa
+                Xóa
             </button>
         </div>
     </Form>
